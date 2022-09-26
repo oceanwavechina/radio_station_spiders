@@ -10,4 +10,5 @@ from itemadapter import ItemAdapter
 
 class RadioStationSpidersPipeline:
     def process_item(self, item, spider):
+        print('-'* 100, item)
         return item
