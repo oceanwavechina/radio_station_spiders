@@ -6,9 +6,12 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
+import logging
+import sqlite3
 
+conn = sqlite3.connect('test.db')
 
 class RadioStationSpidersPipeline:
     def process_item(self, item, spider):
-        print('-'* 100, item)
+        logging.log(logging.INFO, item)
         return item
